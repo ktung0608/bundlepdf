@@ -521,5 +521,5 @@ with col3:
             filedata = fileobj['Body'].read()
                 
             base64_pdf = base64.b64encode(filedata).decode('utf-8')
-            pdf_display = F'<iframe src="data:application/pdf;base64,{base64_pdf}" width="650" height="800" type="application/pdf"></iframe>'
+            pdf_display = F'<embed src="data:application/pdf;base64,{base64_pdf}" width="650" height="800" type="application/pdf"></embed>'
             st.markdown(pdf_display, unsafe_allow_html=True)
